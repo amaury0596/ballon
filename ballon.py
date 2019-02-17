@@ -13,6 +13,9 @@ surfaceH = 500
 ballonW = 50
 ballonH = 66
 
+nuageW = 300
+nuage = 300
+
 
 
 
@@ -21,6 +24,9 @@ surface = pygame.display.set_mode((surfaceW,surfaceH))
 pygame.display.set_caption('ballon volant')
 
 img = pygame.image.load('Ballon01.png')
+imgNuageH = pygame.image.load('NuageHaut.png')
+imgNuageB = pygame.image.load('NuageBas.png')
+
 
 print(img)
 
@@ -106,7 +112,14 @@ def gameover():
 
 	
 
-	
+def nuageH(x,y,image):
+
+	surface.blit(image,(x,y))
+
+def nuageB(x,y,image):
+
+	surface.blit(image,(x,y))
+
 
 	
 
