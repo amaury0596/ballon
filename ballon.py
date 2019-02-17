@@ -144,15 +144,24 @@ def principal():
 
 	appuy = False
 
+	pos_nuage = 800
+
 	
 
 	while not game_over :
+
+		pos_nuage += -0.5
+
+		
 
 		
 
 		surface.fill(blue)
 
 		ballon(x,y,img)
+		nuageH(pos_nuage,0,imgNuageH)
+
+
 
 		pygame.display.update()
 
@@ -168,6 +177,7 @@ def principal():
 					appuy = True
 
 					y_mouvement = -0.5
+
 
 			if event.type == pygame.KEYUP and appuy:
 
